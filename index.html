@@ -1,94 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Iniciar Sesion</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
 
-    <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="css/carousel.css" rel="stylesheet">
+        <link rel="icon" href="img/manzana.png" type="image/png" sizes="16x16">
 
 
-    <style>
-      .bd-placeholder-img {
+
+  
+</head>
+<body>
+
+
+<style>
+    .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-
-  </head>
-
-  <body class="text-center">
-
-    <form class="form-signin" name=Formulario action="Login.html">
-        <img class="mb-4" src="img/login.png" alt="" width="150" height="150">
-        
-        <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesion</h1>
-
-        <label  class="sr-only">Usuario</label>
-        <input type="text" name="usuario" class="form-control" value="Jeury" placeholder="Nombre de usuario" required autofocus>
-        <label class="sr-only">Contraseña</label>
-        <input type="password" name="Password" class="form-control" placeholder="Password" value="124" required>
-  <div class="checkbox mb-3">
-  
-  </div>
-  <button  class="btn btn-lg btn-primary btn-block" type="button" onclick="iniciarSesion()">Iniciar Sesion</button>
-  <p class="mt-5 mb-3 text-muted">&copy;2019 Jeury Suarez Hernandez</p>
-</form>
-
-
-
-</body>
-</html>
-
-
-
-<script>
-
-    function iniciarSesion(){
-
-        usuario = document.Formulario.usuario.value;
-        pass = document.Formulario.Password.value;
-    
-
-        var usuariopreterminado = "admin";
-        var clavepreterminda = "1234";
-
-        if (usuario == usuariopreterminado && pass == clavepreterminda ) {
-            
-        window.location = "Index.html";
-
-
-        }else{
-
-        alert("Nombre de usuario o contrasena incorrecta");
-
-
-        }
     }
 
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+</head>
 
-</script>
+<body>
+    <header>  
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow-sm p-3 mb-5 bg-white rounded" >
+            <img src="img/manzana.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            JeurySoft
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold " href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Lista de opciones
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Estudiante.html">Estudiantes</a>
+                            <a class="dropdown-item" href="Profesor.html">Profesor</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Asignatura.html">Asignatura</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+
+
+<div class="container marketing ">
+
+    <div class="row">
+        <div class="col-lg-4">
+        <img src="img/estudiantes.png" class="rounded-circle mx-auto d-block" alt="...">
+            <h2>Estudiantes</h2>
+            <p>Aqui podra ver Los Estudiantes registrados en el sistema como tambie Podra
+                agregar un nuevo estudiante.</p>
+            <p><a class="btn btn-primary" href="Estudiante.html" role="button">Formulario Estudiante</a></p>
+        </div>
+        
+
+
+        <div class="col-lg-4">
+                    
+            <img src="img/profesor.png" class="rounded-circle mx-auto d-block" alt="...">
+
+            <h2>Profesor</h2>
+            <p>En este apartado pordra registrar un profesor como tambien ver la lista de los
+                profesores registrados y modificar estos si quiere .</p>
+            <p><a class="btn btn-primary" href="Profesor.html" role="button">Formulario Profesor</a></p>
+        </div>
+        
+
+        <div class="col-lg-4">
+                    <img src="img/universidad.png" class="rounded-circle mx-auto d-block" alt="...">
+            <h2>Asignatura</h2>
+            <p>Aqui podra registrar una asignatura como tambien ver la lista de asignaturas y 
+                editar y eliminar.</p>
+            <p><a class="btn btn-primary" href="Asignatura.html" role="button">Formulario asignaturas</a></p>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+        <!-- FOOTER -->
+        <footer class="container text-center">
+            <p>&copy; 2017-2019 JeurySoft, SxA. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+
+
+
+
+    
+</body>
+</html>
