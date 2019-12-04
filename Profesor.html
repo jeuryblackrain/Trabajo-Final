@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profesor</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="ionicons-master/docs/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/carousel.css" rel="stylesheet">
+    <link rel="icon" href="img/Profesor.png" type="image/png" sizes="16x16">
+
+
+
+
+
+</head>
+
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+    
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow-sm p-3 mb-5 bg-white rounded">
+            <img src="img/manzana.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            JeurySoft
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold " href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Lista de opciones
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " href="Estudiante.html">Estudiantes</a>
+                            <a class="dropdown-item disabled" tabindex="-1" aria-disabled="true">Profesor</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Asignatura</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+<div class="container">
+
+    <br> <br><br> <br>
+    <h1 class=" text-xl-center font-weight-bold mt-5">Docentes</h1>
+   <hr>
+    
+    <div class="card-deck">
+    <div class="card shadow-sm p-3 mb-5 bg-white rounded" >
+        <img src="img/aula.png" class="rounded mx-auto d-block" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Registrar Profesor</h5>
+            <p class="card-text">Aqui se registrar un nuevo Profesor, el cual debera de llenar cada uno de los datos que
+                mostrar a continuacion al hacer clic en el boton.
+            </p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted"><button class="btn btn-primary btn-lg btn-block mt-2" onclick="Docente()" id="btnDocente"><i class="icon ion-md-person">Nuevo</i></button>
+
+    </small>
+            </div>
+        </div>
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+            <img src="img/educacion.png" class="rounded mx-auto d-block" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-center font-weight-bold">Lista De Profesores</h5>
+                <p class="card-text">Haciendo clic aqui vera una lista de todos los estudiante registado como tambien 
+                    podra <strong>Eliminar y Editar</strong>. </p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted"><button class="btn btn-primary btn-lg btn-block mt-2" id="myBtn"><i class="icon  ion-md-list">Lista de estudiante</i>
+    </button>
+    </small>
+            </div>
+        </div>
+    </div>
+                <hr>
+
+        <div id="modalFormulario" class="modal">
+            <div class="modal-content">
+        
+
+    <form action="" class="needs-validation" novalidate>
+        <h3>Registrar Docente</h3>
+        <hr>
+    <div class="contenido">
+
+
+        <div class="form-row">
+            <div class="col-12  col-sm-6 col-md-1">
+                <label>ID : </label>
+                <input type="number" id="IdProfesor" class="form-control" required>
+                <div class="invalid-feedback">
+                    Debe de tener un ID
+                </div>
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="col-12  col-sm-6 col-md-6">
+                <label>Nombre : </label>
+                <input type="text" id="nombre" class="form-control" required>
+                <div class="invalid-feedback">
+                    Debe de Digitar el Nombre
+                </div>
+            </div>
+
+            <div class="col-12  col-sm-6 col-md-6">
+                <label>Cedula : </label>
+                <input type="text" id="cedula" class="form-control" onkeyup="GuionCedula()" maxlength="13" required>
+                <div class="invalid-feedback">
+                    Debe de Digitar la Cedula
+                </div>
+            </div>
+
+            <div class="col-12  col-sm-6 col-md-6">
+                <label>Asignatura : </label>
+                <input type="text" id="asignatura" class="form-control"  maxlength="20" required>
+                <div class="invalid-feedback">
+                    Debe de Digitar la Asignatura
+                </div>
+            </div>
+
+            <div class="col-12  col-sm-6 col-md-6">
+                <label>Direccion : </label>
+                <input type="text" id="direccion" class="form-control" required>
+                <div class="invalid-feedback">
+                    Debe de Digitar un Direccion
+                </div>
+            </div>
+
+            <div class="col-12  col-sm-6 col-md-3">
+                <label>Telefono : </label>
+                <input type="text" id="telefono" onkeyup="GuionTel()" maxlength="10" class="form-control" required>
+                <div class="invalid-feedback">
+                    Debe de Digitar un # de telefono
+                </div>
+            </div>
+
+            <div class="col-12  col-sm-6 col-md-3">
+                <label>Email : </label>
+                <input type="text" id="email" class="form-control" required>
+                <div class="invalid-feedback">
+                    Debe de Digitar un Email
+                </div>
+            </div>
+        </div><hr>
+        <button class="btn btn-primary mt-2" type="submit" onclick="GuardarDocente()">Nuevo</button>
+        <button class="btn btn-danger mt-2" type="cancel" onclick="Cerrar()">Cancelar</button>
+
+</form>
+
+
+        </div>
+
+            </div>
+        
+        </div>
+
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="listadoDiv">
+                    <h1 class="text-center">Listado de Profesores</h1>
+                    <table class="table table-hover ">
+                        <thead>
+                            <th scope="col">ID</th>
+                            <th>Nombre</th>
+                            <th>Cedula</th>
+                            <th>Asignatura</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                            <th colspan="2">Opciones</th>
+                        </thead>
+                        <tbody id="tablaBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+            
+
+
+            </div>
+
+
+
+
+
+            
+</body>
+
+
+</footer>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>    
+            
+</script>
+
+
+
+
+
+
+
+<script>
+  
+  //Funcion para validar que los campos no esten en blanco
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();  
+
+
+        var Docentes = [];
+         document.getElementById("listadoDiv").display = "none";
+
+
+        function GuardarDocente() {
+
+            var id = document.getElementById("IdProfesor").value;
+            var nombre = document.getElementById("nombre").value;
+            var cedula = document.getElementById("cedula").value;
+            var asignatura = document.getElementById("asignatura").value;
+            var direccion = document.getElementById("direccion").value;
+            var telefono = document.getElementById("telefono").value;
+            var email = document.getElementById("email").value;
+       
+            var Docente = {
+
+
+                    "id" : id,
+                    "nombre" : nombre,
+                    "cedula": cedula,
+                    "asignatura": asignatura,
+                    "direccion": direccion,
+                    "telefono": telefono,
+                    "email" : email
+            }
+
+
+                 if (id == null || id.length == 0 || /^\s+$/.test(id)) {
+                alert("ID no puede estar vacio");
+                return false;
+            }
+            Docentes.push(Docente);
+           
+
+            //---VACIA LOS CAMPOS LUEGO DE GUARDAR UN ESTUDIANTE
+                document.getElementById("IdProfesor").value = "";
+                document.getElementById("nombre").value = "";
+                document.getElementById("cedula").value = ""; 
+                document.getElementById("asignatura").value = "";
+                document.getElementById("direccion").value = "";
+                document.getElementById("telefono").value = "";
+                document.getElementById("email").value = "";
+            
+                
+                ListaProfesores();
+                alert("!!Docente Registrado!!")
+                modalF.style.display = "none";
+                
+           
+            }
+             
+            function Cerrar(){
+                modalF.style.display = "none";
+
+            }
+        
+
+        function ListaProfesores() {
+
+            var DibujarTabla = "";
+            Docentes.forEach(Docente => {
+                
+                DibujarTabla = DibujarTabla +
+                    "<tr>" +
+                    "<td>" + Docente.id + "</td>" +
+                    "<td>" + Docente.nombre + "</td>" +
+                    "<td>" + Docente.cedula + "</td>" +
+                    "<td>" + Docente.asignatura + "</td>" +
+                    "<td>" + Docente.direccion + "</td>" +
+                    "<td>" + Docente.telefono + "</td>" +
+                    "<td>" + Docente.email + "</td>" +
+                    "<td><button type='button' class='btn btn-warning' onclick='Editar(" + Docente.id + ")'>Editar</button></td>" +
+                    "<td><button type='button' class='btn btn-danger' onclick='Eliminar(" + Docente.id + ")'>Eliminar</button></td>" +
+                    "</tr>"
+                
+            });
+                document.getElementById("tablaBody").innerHTML = DibujarTabla;  
+                if (Docentes.lenght)
+                    document.getElementById("listadoDiv").display = "";  
+        }
+
+
+          function Editar(id) {
+                Docentes.forEach(Docente => {
+                    if (Docente.id == id) {
+                            document.getElementById("IdProfesor").value = Docente.id;
+                            document.getElementById("nombre").value = Docente.nombre;
+                            document.getElementById("cedula").value = Docente.cedula;
+                             document.getElementById("asignatura").value = Docente.asignatura;
+                            direccion = document.getElementById("direccion").value = Docente.direccion;
+                            telefono = document.getElementById("telefono").value = Docente.telefono;
+                            email = document.getElementById("email").value = Docente.email;
+                    }
+                });
+                         
+                          modalF.style.display = "block";
+                          modal.style.display = "none";
+
+
+            }
+
+            function Eliminar(id) {
+                if (confirm("Esta seguro desea Eliminar?")) {
+                    var i = 0;
+                    Docentes.forEach(Docente => {
+                        if (Docente.id == id) {
+                            Docentes.splice(i, 1);
+                            alert("Eliminado correctamente");
+                            ListaProfesores();
+                        }
+                        i++;
+                    });
+                }
+            }
+
+
+      
+        
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+
+            //Modal del Forumalario
+                var modalF = document.getElementById("modalFormulario");
+
+                var btnestudiante = document.getElementById("btnDocente");
+
+                var spanr = document.getElementsByClassName("closeF")[0];
+
+                btnestudiante.onclick = function () {
+                    modalF.style.display = "block";
+                }
+
+        
+
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modalF.style.display = "none";
+                    }
+                }
+
+
+
+            
+</script>
+
+
+
+
+    <script>
+        function GuionCedula() {
+        var x = document.getElementById("cedula");
+        x.value = x.value.replace("-", "");
+        var numero = x.value.replace("-", "");
+        var cedula = "";
+        for (var i = 0; i < numero.length; i++) { cedula +=numero[i]; if (i==2 || i==9) { cedula +="-" ; } } x.value=cedula; }
+     </script>
+    
+    <script>
+        function GuionTel() {
+            var x = document.getElementById("telefono");
+            x.value = x.value.replace("-", "");
+            var numero = x.value.replace("-", "");
+            var cedula = "";
+            for (var i = 0; i < numero.length; i++) { cedula += numero[i]; if (i == 2 || i == 5) { cedula += "-"; } } x.value = cedula;
+        }
+        
+        </script>
+        
